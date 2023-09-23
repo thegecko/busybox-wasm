@@ -22,7 +22,7 @@ jobs:
           ./build-with-docker.sh
       - uses: actions/upload-artifact@v3
         with:
-          name: wasm-package
+          name: dist
           path: |
             ./build/busybox/*.wasm
             ./build/busybox/*.mjs
@@ -36,8 +36,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
-        with:
-          path: dist
       - uses: softprops/action-gh-release@v1
         with:
           files: dist/*.*
