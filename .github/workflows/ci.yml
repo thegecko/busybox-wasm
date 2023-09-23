@@ -37,13 +37,13 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         with:
-          path: artifacts
+          path: dist
       - uses: softprops/action-gh-release@v1
         with:
-          files: artifacts/*/*.*
+          files: dist/*.*
       - name: Setup npmrc
         run: |
-          echo "@arm-debug:registry=https://npm.pkg.github.com/" >> .npmrc
+          echo "@thegecko:registry=https://npm.pkg.github.com/" >> .npmrc
           echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> .npmrc
       - name: Publish
         run: npm publish
