@@ -1,0 +1,9 @@
+.github
+docker
+emlib
+patches
+.gitignore
+*.sh
+build
+node_modules
+yarn.lock

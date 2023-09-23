@@ -1,0 +1,14 @@
+{
+  "name": "@thegecko/busybox-wasm",
+  "version": "1.0.0",
+  "author": "Rob Moran <github@thegecko.org>",
+  "license": "MIT",
+  "main": "busybox_unstripped.mjs",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "@types/emscripten": "^1.39.8"
+  }
+}

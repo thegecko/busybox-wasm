@@ -41,3 +41,9 @@ jobs:
       - uses: softprops/action-gh-release@v1
         with:
           files: artifacts/*/*.*
+      - name: Setup npmrc
+        run: |
+          echo "@arm-debug:registry=https://npm.pkg.github.com/" >> .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{secrets.GITHUB_TOKEN}}" >> .npmrc
+      - name: Publish
+        run: npm publish
