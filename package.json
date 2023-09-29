@@ -1,6 +1,6 @@
 {
   "name": "@thegecko/busybox-wasm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Rob Moran <github@thegecko.org>",
   "license": "MIT",
   "main": "dist/busybox_unstripped.mjs",
